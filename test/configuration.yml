@@ -1,0 +1,11 @@
+---
+
+sources:
+  - name: DB1
+    type: MYSQL
+    url: mysql://user:pass@localhost:3306/db1
+    query: select 1 from dual
+  - name: DB2
+    type: MYSQL
+    url: mysql://user:pass@localhost:3306/db1
+    query: select type, status, sum(id) as m1, count(id) as m2 from metrics1 group by type, status

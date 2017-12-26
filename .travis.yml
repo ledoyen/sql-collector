@@ -1,4 +1,8 @@
-sudo: false
+# Bug since 10/01/2018
+# See http://sunjay.ca/2016/07/25/rust-code-coverage
+# See https://github.com/travis-ci/travis-ci/issues/9061
+# workaround docker issue (sudo make the build outside a container)
+sudo: required
 language: rust
 cache: cargo
 # Dependencies of kcov, used by coverage
